@@ -23,6 +23,7 @@ COPY ./Gemfile /app/Gemfile
 COPY ./Gemfile.lock /app/Gemfile.lock
 
 RUN apk add --no-cache \
+  linux-headers \
   git \
   bash \
   build-base \
@@ -56,6 +57,7 @@ FROM base
 LABEL maintainer="keygen.sh <oss@keygen.sh>"
 
 RUN apk add --no-cache \
+  linux-headers \
   bash \
   postgresql-client \
   tzdata \

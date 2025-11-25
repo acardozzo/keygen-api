@@ -11,6 +11,13 @@ ENV BUNDLE_WITHOUT="development:test" \
 # Build stage
 FROM base AS build
 
+# Desabilitar gems opcionais durante o build
+ENV NO_SENTRY=1 \
+    NO_WORKOS=1 \
+    NO_JUDOSCALE=1 \
+    NO_CRONITOR=1 \
+    NO_SENDGRID=1
+
 WORKDIR /app
 COPY ./Gemfile /app/Gemfile
 COPY ./Gemfile.lock /app/Gemfile.lock

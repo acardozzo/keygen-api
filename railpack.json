@@ -1,0 +1,11 @@
+{
+  "build": {
+    "env": {
+      "KEYGEN_HOST": "build.local",
+      "KEYGEN_MODE": "singleplayer",
+      "KEYGEN_EDITION": "CE",
+      "RAILS_ENV": "production",
+      "SECRET_KEY_BASE": "dummy_key_for_build_only_not_used_in_runtime"
+    }
+  }
+}
